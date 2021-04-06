@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "start": "nodemon --inspect ./build/index.js",
+    "watch": "node-sass -w build/resource/scss/app.scss build/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,11 +23,14 @@
   },
   "homepage": "https://github.com/tuanminh01/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "node-sass": "^5.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
     "@types/node": "^14.14.37",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
