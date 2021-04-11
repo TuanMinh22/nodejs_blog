@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const handlebars = require("express-handlebars");
 const app = express();
 const port = 3000;
+// css is static files
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.static(path.join(__dirname, "public/img")));
 //HTTP logger

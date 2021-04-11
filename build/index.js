@@ -4,6 +4,8 @@ var morgan = require("morgan");
 var handlebars = require("express-handlebars");
 var app = express();
 var port = 3000;
+// css is static files
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "public/img")));
 //HTTP logger
 app.use(morgan("combined"));
